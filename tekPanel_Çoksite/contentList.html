@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>DataTables</title>
+    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.3.5/sweetalert2.all.js" integrity="sha512-DpIj2ZM2B07A+9mdz+TfjwGQTBj3NsuntQjSUf679jjhR89LwF/m3EACNm0jxUaNS9hm056l6K8vnJ216NNbWQ==" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="assets/fonts/fontawesome.css">   
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.tiny.cloud/1/dd7k2bautmk37812mno43mbg3eyv9tvk8pj8pqvcys7aqvnf/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <!--helper-->
+    <script src="assets/helper.js"></script>
+    <style>
+        .tox-tinymce{
+            height: 400px !important;
+        }
+        #modalContentAdd .modal-dialog{
+            max-width: 90%;
+        }
+    </style>
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/general.css">
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+    <!-- BEGIN: Header-->
+    <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
+                        </ul>
+                       
+                       
+                    </div>
+                    <ul class="nav navbar-nav float-right">
+                       
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
+                        <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
+                            <div class="search-input">
+                                <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
+                                <input class="input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="template-list">
+                                <div class="search-input-close"><i class="feather icon-x"></i></div>
+                                <ul class="search-list search-list-main"></ul>
+                            </div>
+                        </li>
+                        
+                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">Pen Yazılım</span><span class="user-status"></span></div><span><img class="round" src="https://pen.com.tr/assets/imgs/pen-logo.svg" alt="avatar" height="40" width="40"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="page-user-profile.html"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="app-email.html"><i class="feather icon-mail"></i> My Inbox</a><a class="dropdown-item" href="app-todo.html"><i class="feather icon-check-square"></i> Task</a><a class="dropdown-item" href="app-chat.html"><i class="feather icon-message-square"></i> Chats</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="login.html"><i class="feather icon-power"></i> Çıkış Yap</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav> 
+    <!-- END: Header-->
+
+
+
+<!-- BEGIN: Main Menu-->
+<div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+    <div class="navbar-header">
+        <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto"><a class="navbar-brand" href="html/ltr/vertical-menu-template/index.html">
+                    
+                    <h2 class="brand-text mb-0">BTSO Tek Panel</h2>
+                </a></li>
+            <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
+        </ul>
+    </div>
+    <div class="shadow-bottom"></div>
+    <div class="main-menu-content">
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            
+            <li class=" nav-item"><a href="index.html"><i class="fas fa-home"></i><span class="menu-title" data-i18n="Home">Anasayfa</span></a>
+            </li>
+            <!-- <li class=" nav-item"><a href="icerik.html"><i class="fas fa-upload"></i><span class="menu-title" data-i18n="Home">İçerik</span></a>
+            </li> -->
+            <li class="active nav-item"><a href="contentList.html"><i class="fas fa-podcast"></i><span class="menu-title" >İçerik Listesi</span></a>
+            </li>
+           
+         
+            <li class="sidenav-item">
+                <a href="javascript:" class="sidenav-link sidenav-toggle">
+                    <i class="fas fa-list"></i>
+                    <div>Tanımlar</div>
+                </a>
+                <ul class="sidenav-menu">
+                    <li class=" nav-item"><a href="contentType.html"><i class="fas fa-th"></i><span class="menu-title" >İçerik Tip</span></a>
+                    </li>
+                   
+                    <li class=" nav-item"><a href="category.html"><i class="fab fa-accusoft"></i><span class="menu-title" >Kategori</span></a>
+                    </li>
+                    <li class="nav-item"><a href="site.html"><i class="fab fa-weebly"></i><span class="menu-title" >Site</span></a>
+                    </li>
+                    <li class=" nav-item"><a href="users.html"><i class="fas fa-users"></i><span class="menu-title" >Kullanıcılar</span></a>
+                    </li>
+                   
+                    
+                    
+                </ul>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+<!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">İçerik Listesi</h2>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Anasayfa</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">İçerik Listesi
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="content-body">
+               
+                <!-- Zero configuration table -->
+                <div class="row justify-content-end">
+                    
+                </div>
+                <section id="basic-datatable">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header justify-content-end">  
+                                    <div class="col-sm-4">
+                                        <button type="button" id="addContent" class="btn btn-primary">İçerik Ekle</button>
+                                    </div>                                 
+                                    <h4 class="card-title"></h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                        <p class="card-text"></p>
+                                        <div class="table-responsive">
+                                            <table class="table zero-configuration">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Başlık</th>
+                                                        <th>İçerik Tip</th>
+                                                        <th>Kategori</th> 
+                                                        <th>Site Adı</th>
+                                                        <th>İşlemler</th>                                                       
+
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="contentListBody">
+                                               
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Başlık</th>
+                                                        <th>İçerik Tip</th>
+                                                        <th>Kategori</th> 
+                                                        <th>Site Adı</th>
+                                                        <th>İşlemler</th>  
+                                                        
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true" id="modalContent">
+
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button style="margin-top: 10px" type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+                </div>                
+                <div class="layout-content">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="javascript:void(0)" name="postform" id="postform" class="form-horizontal">
+                                <div class="form-row row">                                    
+                                    <section id="basic-datatable">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header justify-content-end">
+                                                        <div class="col-sm-4">
+                                                           
+                                                        </div>
+                                                        <h4 class="card-title"></h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body card-dashboard">
+                                                            <div class="row">
+                                                                <div class="col-sm-10 ">
+                                                                    <div class="form-group justify-content-center">
+                                                                        <label class="form-label">Başlık</label>
+                                                                        <input type="text" class="form-control" id="eklencekBaslik">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Kategori</label>
+                                                                        <select id="kategori" class="form-control" >
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">İçerik Tip</label>
+                                                                        <select id="icerikTip" class="form-control" >
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Site İsmi</label>
+                                                                        <select id="siteName" class="form-control" >
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                        
+                                                                    <!-- <div class="col-sm-6 mt-2 ml-1 table-wrapper-scroll-y my-custom-scrollbar" id="siteListContainer">
+                                                                        <h3>Siteler</h3>
+                                                                        <table class="table table-bordered" id="siteTable">
+                                                                            
+                                                                                 <tbody id="siteNames">
+                    
+                                                                                  </tbody>
+                                                                         </table>                                                                                        
+                                                                       
+                                                                    </div> -->
+                                                                  
+                                                                    <div class="col-sm-12 mt-3">
+                                                                        <textarea name="" id="detay_icerik"  cols="80" rows="60">
+
+                                                                        </textarea>
+                                                                    </div>                                                    
+                                                            </div>                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                 
+                                  
+                        </div>
+                       
+
+                        <button class='btn btn-success'  id='updateBtn' >Güncelle</button>
+                        <input type="hidden" id="content_id">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true" id="modalContentAdd">
+
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button style="margin-top: 10px" type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+            </div>                
+            <div class="layout-content">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="javascript:void(0)" name="postform" id="postform1" class="form-horizontal">
+                            <div class="form-row row">                                    
+                                <section id="basic-datatable">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header justify-content-end">
+                                                        <div class="col-sm-4">
+                                                           
+                                                        </div>
+                                                        <h4 class="card-title"></h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body card-dashboard">
+                                                            <div class="row">
+                                                                <div class="col-sm-5 ">
+                                                                    <div class="form-group justify-content-center">
+                                                                        <label class="form-label">Başlık</label>
+                                                                        <input type="text" class="form-control" id="contentSubject">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Kategori</label>
+                                                                        <select id="contentCategory" class="form-control" >
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">İçerik Tip</label>
+                                                                        <select id="contentType" class="form-control" >
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                        
+                                                                    <div class="col-sm-6 mt-2 ml-1 table-wrapper-scroll-y my-custom-scrollbar" id="siteListContainer">
+                                                                        <h3>Siteler</h3>
+                                                                        <table class="table table-bordered" id="siteTable">
+                                                                            
+                                                                                 <tbody id="contentSiteNames">
+                    
+                                                                                  </tbody>
+                                                                         </table>                                                                                        
+                                                                       
+                                                                    </div>
+                                                                  
+                                                                    <div class="col-sm-5">
+                                                                        <textarea name="" id="content_detail" cols="60" rows="30"></textarea>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="container mt-2">
+                                                                            <div class="form-group"  id="fileDiv">
+                                                                                <label class="form-label" style="display: block;">Ana Görsel</label>
+                                                                                <input id="myFile" class="btn btn-outline-primary inputfile" type="file" name="myFile" >
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="container mt-4">
+                                                                            <form id='post-form' class='post-form' method='post'>
+                                                                                <label for='files' style="display: block;">İçerisindeki Görseller: </label>
+                                                                                <input id='files' class="btn btn-outline-info" type='file' multiple/>
+                                                                                <div >
+                                                                                    <output id='result1' />
+                                                                                </div>
+                                                                               
+                                                                              </form>
+                                                                        </div>
+                                                                        <!-- <div class="container" id="myId">
+                                                                            <form action="/file-upload/"
+                                                                            class="dropzone"
+                                                                            id="myAwesomeDropzone"></form>
+                                                                        
+                                                                        </div> -->
+                                                                       
+                                                                    </div>
+                                                                   
+                                                                   
+                                                            </div>
+                                                            <div class="col-sm-12" style="text-align: center;">
+                                                                <button class="btn btn-success" style="margin: 10px; width: 300px; height: 40px;" id="icerikEkle">İçeriği Gönder</button>
+                                                            </div>
+                                                           
+                                                               
+                                                           
+                                                             
+                                                           
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </section>
+                             
+                              
+                    </div>              
+                   
+
+                   
+                    <input type="hidden" id="content_id">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+                <!--/ Zero configuration table -->
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix blue-grey lighten-2 mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2020<a class="text-bold-800 grey darken-2" href="" target="_blank">penTech,</a>All rights Reserved</span>
+            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="feather icon-arrow-up"></i></button>
+        </p>
+    </footer>
+    <!-- END: Footer-->
+    <script src="assets/jsController/contentList.js"></script>
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="app-assets/js/core/app-menu.js"></script>
+    <script src="app-assets/js/core/app.js"></script>
+    <script src="app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/datatables/datatable.js"></script>
+    <!-- END: Page JS-->
+
+</body>
+<!-- END: Body-->
+
+</html>
